@@ -6,7 +6,7 @@
 <title>Projet Génération lance-eau - IqbAladin</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <style>
-/* Style rigoureusement identique au modèle de référence */
+/* Style de base */
 * { box-sizing: border-box; }
 body {
 margin: 0;
@@ -65,7 +65,31 @@ background: #f9f9f9;
 text-align: center;
 margin-bottom: 20px;
 }
-/* Le fameux "carré gris" du modèle */
+
+/* --- MODIFICATION POUR LES PHOTOS EN LIGNE --- */
+.grid-photos {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+margin-top: 20px;
+}
+.grid-item {
+flex: 1;
+text-align: center;
+}
+.grid-item img {
+width: 100%;
+height: 200px; /* Hauteur fixe pour l'alignement */
+object-fit: cover; /* Coupe proprement l'image pour remplir le cadre */
+border-radius: 10px;
+}
+.grid-item h5 {
+margin: 10px 0 5px 0;
+font-weight: 600;
+color: #555;
+}
+/* ------------------------------------------- */
+
 .placeholder-img {
 width: 100%;
 height: 200px;
@@ -160,15 +184,15 @@ margin-top: 50px;
 
 <h4>🏗️ Notre Maquette de Structure (1:5)</h4>
 <div class="grid-photos">
-  <div>
+  <div class="grid-item">
     <h5>Face</h5>
     <img src="face.jpg" alt="Maquette 1:5 vue de face">
   </div>
-  <div>
+  <div class="grid-item">
     <h5>Dos</h5>
     <img src="dos.jpg" alt="Maquette 1:5 vue de dos">
   </div>
-  <div>
+  <div class="grid-item">
     <h5>Détails</h5>
     <img src="interieur.jpg" alt="Maquette 1:5 zoom intérieur">
   </div>
